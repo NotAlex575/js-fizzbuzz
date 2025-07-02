@@ -25,4 +25,21 @@ for(let i = 1; i <= 100; i++){
             divisore_5 = true
         }
     }
+
+    //se sappiamo che è divisibile per 3, scrive il console "Fizz"
+    if(divisore_3) { 
+        console.log("Fizz") 
+    }
+    //altrimenti se sappiamo che è divisibile per 5, scrive il console "Buzz"
+    else if (divisore_5) { 
+        console.log("Buzz") 
+    }
+    //altrimenti se sappiamo che è divisibile per 3 e per 5, scrive il console "FizzBuzz"
+    else if (divisore_3_e_5) { 
+        console.log("FizzBuzz") 
+    }
+    //altrimenti scriviamo in console il contenuto di i
+    else{
+        console.log(i)
+    }
 }
