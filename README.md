@@ -1,73 +1,60 @@
-<h1 align="center">Js Fizzbuzz</h1>
+Esercizio di oggi: FizzBuzz
+nome repo: js-fizzbuzz
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/js-fizzbuzz?color=56BEB8">
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/js-fizzbuzz?color=56BEB8">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/js-fizzbuzz?color=56BEB8">
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/js-fizzbuzz?color=56BEB8">
-</p>
+Consegna:
+Scrivi un programma che stampi i numeri da 1 a 100,
+ma per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
+Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
-</p>
+Prima di partire a scrivere codice poniamoci qualche domanda:
+Come faccio a sapere se un numero è divisibile per?
+Abbiamo visto qualcosa di particolare che possiamo usare?
 
-<br>
+Consigli del giorno:
+scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare,
+proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano",
 
-## :dart: About ##
+Fate sempre il file README.md prima di cominciare a lavorare e scomponete il problema in sotto problemi.
+Numero minimo di push: 5
 
-Describe your project
+____________________________________________________________________________________________________________________
 
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
-
-## :rocket: Technologies ##
-
-The following tools were used in this project:
-
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## :white_check_mark: Requirements ##
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
-
-```bash
-# Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/js-fizzbuzz
-
-# Access
-$ cd js-fizzbuzz
-
-# Install dependencies
-$ yarn
-
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
-```
-
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
+costruzione del codice
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
 
-&#xa0;
+1 stabilisco tre valori booleani (divisore_di_3 -> divisibile per 3, divisore_di_5 -> divisibile per 5, divisore_di_3_e_5 -> divisibile per entrambi), e ci servirà
+  poi per fare i print del risultato (Fizz per i divisibili di 3, Buzz per i divisibili di 5, FuzzBuzz per entrambi) 
 
-<a href="#top">Back to top</a>
+2 inizializziamo un ciclo for che va da 1 a 100 (che ha come contatore i, dove continuerà ad incrementarsi di valore (i++) finche non sarà un valore maggiore di 100)
+  <!--FOR-->
+  2.1 settiamo divisore_di_3, divisore_di_5 e divisore_di_3_e_5 false
+  2.2 ? se il valore di i è divisibile per 3 (qui si usa % per vedere se il risultato ha come risultato == il resto(i%3 == 0 -> ha il resto uguale a 0)), allora
+
+    2.2.1 settiamo divisore_di_3 true
+
+  2.3 altrimenti se il valore di i è divisibile per 5, allora
+
+    2.3.1 ?se il valore booleano di divisore_di_3 è true, allora
+
+      2.3.1.1 settiamo divisore_di_3 false
+
+      2.3.1.2 settiamo divisore_di_3_e_5 true
+
+    2.3.2 altrimenti
+
+      2.3.2.1 settiamo divisore_di_5 true
+    
+  2.4 ? se divisore_di_3 è true, allora scrivi Fizz
+  2.5 altrimenti se divisore_di_5 è true, allora scrivi Buzz
+  2.6 altrimenti se divisore_di_3_e_5 è true, allora scrivi BuzzFizz
+  2.7 altrimenti scrivi il valore di i
+  <!--FINE FOR-->
+
+3 end
+
+
+
+
+
+
