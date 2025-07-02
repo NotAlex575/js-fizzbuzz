@@ -23,12 +23,11 @@ costruzione del codice
 
 
 
-1 stabilisco tre valori booleani (divisore_di_3 -> divisibile per 3, divisore_di_5 -> divisibile per 5, divisore_di_3_e_5 -> divisibile per entrambi), e ci servirà
-  poi per fare i print del risultato (Fizz per i divisibili di 3, Buzz per i divisibili di 5, FuzzBuzz per entrambi) 
 
-2 inizializziamo un ciclo for che va da 1 a 100 (che ha come contatore i, dove continuerà ad incrementarsi di valore (i++) finche non sarà un valore maggiore di 100)
+1 inizializziamo un ciclo for che va da 1 a 100 (che ha come contatore i, dove continuerà ad incrementarsi di valore (i++) finche non sarà un valore maggiore di 100)
   <!--FOR-->
-  2.1 settiamo divisore_di_3, divisore_di_5 e divisore_di_3_e_5 false
+  1.1 stabilisco tre valori booleani (divisore_di_3 -> divisibile per 3, divisore_di_5 -> divisibile per 5, divisore_di_3_e_5 -> divisibile per entrambi) = false 
+  e ci serviranno poi per fare i print del risultato (Fizz per i divisibili di 3, Buzz per i divisibili di 5, FuzzBuzz per entrambi) 
   2.2 ? se il valore di i è divisibile per 3 (qui si usa % per vedere se il risultato ha come risultato == il resto(i%3 == 0 -> ha il resto uguale a 0)), allora
 
     2.2.1 settiamo divisore_di_3 true
