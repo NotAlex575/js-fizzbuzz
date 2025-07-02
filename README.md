@@ -32,7 +32,7 @@ costruzione del codice
 
     2.2.1 settiamo divisore_di_3 true
 
-  2.3 altrimenti se il valore di i è divisibile per 5, allora
+  2.3 ? se il valore di i è divisibile per 5, allora
 
     2.3.1 ?se il valore booleano di divisore_di_3 è true, allora
 
